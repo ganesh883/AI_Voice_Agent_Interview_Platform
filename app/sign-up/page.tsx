@@ -2,6 +2,10 @@ import React from 'react'
 import AuthForm from "@/Components/AuthForm";
 
 const Page = () => {
-    return <AuthForm type="sign-up"/>
+    return (
+        <div className="flex items-center justify-center min-h-screen bg-background text-foreground">
+            <AuthForm type="sign-up" />
+        </div>
+    );
 }
 export default Page

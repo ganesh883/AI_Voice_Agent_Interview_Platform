@@ -12,6 +12,7 @@ import {Form} from "@/components/ui/form"
 import Link from "next/link";
 import {toast} from "sonner";
 import FormField from "@/Components/FormField";
+import {useRouter} from "next/navigation";
 
 
 const authFormSchema = (type : FormType) => {
@@ -23,7 +24,7 @@ const authFormSchema = (type : FormType) => {
 }
 
 const AuthForm = ({type} : {type:FormType}) => {
-
+    const router = useRouter();
     const formSchema = authFormSchema(type);
 
     const form = useForm<z.infer<typeof formSchema>>({
@@ -39,10 +40,12 @@ const AuthForm = ({type} : {type:FormType}) => {
     function onSubmit(values: z.infer<typeof formSchema>) {
        try {
             if(type === 'sign-up'){
-                console.log("Sign Up", values);
+               toast.success('Account created successfully. Please Sign In');
+                router.push('/sign-In');
             }
             else{
-                console.log("Sign In", values);
+                toast.success('You have signed in successfully.');
+                router.push('/');
             }
        } catch(error){
            console.log(error);
@@ -54,8 +57,8 @@ const AuthForm = ({type} : {type:FormType}) => {
 
 
     return (
-        <div className="card-border lg:min-w-[566px] flex items-center justify-center min-h-screen bg-background text-foreground px-4">
-            <div className="flex flex-col gap-6 card py-14 px-10 justify-center ">
+        <div className="card-border lg:min-w-[566px] bg-background text-foreground px-4">
+        <div className="flex flex-col gap-6 card py-14 px-10 justify-center ">
                     <div className="flex flex-row gap-2 justify-center ">
                                 <Image src="/logo.svg" alt="logo" height={32} width={38}/>
                                 <h2 className="text-primary-100">Mockly</h2>
@@ -73,8 +76,20 @@ const AuthForm = ({type} : {type:FormType}) => {
                             placeholder="Enter your name"
                         />
                     )}
-                    <p>Email</p>
-                    <p>Password</p>
+                    <FormField
+                        control={form.control}
+                        name="email"
+                        label="Email"
+                        placeholder="Enter your E-mail"
+                        type="email"
+                    />
+                    <FormField
+                        control={form.control}
+                        name="password"
+                        label="Password"
+                        placeholder="Enter your Password"
+                        type="password"
+                    />
                     <Button className="btn" type="submit">{isSignIn ? 'Sign In' : 'Create an Account'}</Button>
                 </form>
             </Form>
