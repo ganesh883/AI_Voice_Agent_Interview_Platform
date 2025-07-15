@@ -1,4 +1,5 @@
-// Import the functions you need from the SDKs you need
+
+
 import { initializeApp, getApp, getApps } from "firebase/app";
 import {getAuth} from 'firebase/auth';
 import {getFirestore} from 'firebase/firestore';
@@ -12,6 +13,7 @@ const firebaseConfig = {
     appId: "1:1076924299332:web:179322ff6004bbf36b2411",
     measurementId: "G-9ZYQE1RWBV"
 };
+
 
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();

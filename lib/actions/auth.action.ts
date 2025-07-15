@@ -11,13 +11,13 @@ export async function signUp(params : SignUpParams){
         if(e.code === 'auth/email-already-exists'){
             return {
                 success : false,
-                message : 'This email already exists'
+                message : 'This email already exists. Please provide a valid email address.',
             }
         }
 
         return{
             success : false,
-            message : 'Failed to Create an Account'
+            message : 'Failed to Create an Account.'
         }
     }
 }
