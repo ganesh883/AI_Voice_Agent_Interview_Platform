@@ -13,7 +13,7 @@ import Link from "next/link";
 import {toast} from "sonner";
 import FormField from "@/Components/FormField";
 import {useRouter} from "next/navigation";
-import {createUserWithEmailAndPassword} from "@firebase/auth";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "@/Firebase/client";
 import {signIn, signUp} from "@/lib/actions/auth.action";
 
