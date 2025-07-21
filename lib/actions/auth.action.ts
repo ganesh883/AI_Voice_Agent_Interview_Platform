@@ -65,7 +65,7 @@ export async function signIn(params : SignInParams){
 
         return {
             success: false,
-            message : 'Failed to login into an account';
+            message : 'Failed to login into an account'
         }
     }
 
