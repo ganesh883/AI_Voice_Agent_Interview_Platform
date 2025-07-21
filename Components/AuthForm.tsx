@@ -88,7 +88,7 @@ const AuthForm = ({type} : {type:FormType}) => {
        }
     }
 
-    const isSignIn = type === 'sign-In';
+    const isSignIn = type === 'sign-in';
 
 
     return (
@@ -125,12 +125,12 @@ const AuthForm = ({type} : {type:FormType}) => {
                         placeholder="Enter your Password"
                         type="password"
                     />
-                    <Button className="btn" type="submit">{isSignIn ? 'Sign In' : 'Create an Account'}</Button>
+                    <Button className="btn" type="submit">{isSignIn ? 'Sign in' : 'Create an Account'}</Button>
                 </form>
             </Form>
 
                 <p className="text-center"> {isSignIn? 'No account yet?' : 'Have an account already?'}
-                    <Link href={!isSignIn? '/sign-In' : '/sign-up'} className={"font-bold text-user-primary ml-1"}>{!isSignIn? "Sign In" : "Sign Up"}</Link>
+                    <Link href={!isSignIn? '/sign-in' : '/sign-up'} className={"font-bold text-user-primary ml-1"}>{!isSignIn? "Sign in" : "Sign Up"}</Link>
                 </p>
         </div>
         </div>
