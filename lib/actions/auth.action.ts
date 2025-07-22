@@ -60,6 +60,10 @@ export async function signIn(params : SignInParams){
             }
 
             await setSessionCookie(idToken);
+                return {
+                    success: true,
+                    message: 'Signed in successfully!',
+                };
     }catch (e){
         console.log(e);
 
@@ -100,7 +104,7 @@ export async function getCurrentUser(): Promise<User | null>{
 
         const decodedClaims = await auth.verifySessionCookie(sessionCookie, true);
 
-        const userRecord = await db.collection('users').doc(decodedClaims.id).get();
+        const userRecord = await db.collection('users').doc(decodedClaims.uid).get();
 
         if(!userRecord.exists) return null;
 
