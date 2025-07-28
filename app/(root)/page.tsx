@@ -16,7 +16,7 @@ const Page = () => {
                             Get Interview-Ready with AI-Powered Practice & Feedback
                         </h2>
                         <p className="text-lg text-muted-foreground">
-                            Practice real interview questions and get instant feedback to improve.
+                            Practice with real-world interview questions and receive immediate, actionable feedback.
                         </p>
                     </div>
 
