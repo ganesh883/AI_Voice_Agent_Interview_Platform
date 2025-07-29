@@ -1,6 +1,8 @@
-import React from 'react'
+'use client';
+import React, {useState} from 'react'
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import {useRouter} from "next/navigation";
 
 enum CallStatus {
     INACTIVE = 'INACTIVE',
@@ -13,9 +15,18 @@ interface AgentProps {
     userName: string;
 }
 
-const Agent = ({ userName }: AgentProps) => {
-    const callStatus = CallStatus.FINISHED;
-    const isSpeaking = true;
+interface SavedMessage{
+    role: 'user' | 'system' | 'assistant';
+    content: string;
+}
+
+const Agent = ({ userName, userId, type }: AgentProps) => {
+
+    const router = useRouter();
+    const [isSpeaking, setIsSpeaking] = useState(false);
+    const [callStatus, setCallStatus] = useState<CallStatus>(CallStatus.INACTIVE);
+    const [message, setMessage] = useState<SavedMessage[]>([]);
+
     const messages = [
       'Whats your name?',
       'My name is John Doe, nice to meet you!'
