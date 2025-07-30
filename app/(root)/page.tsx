@@ -4,11 +4,14 @@ import Link from "next/link"
 import Image from "next/image"
 import {dummyInterviews} from "@/constants";
 import InterviewCard from "@/constants/InterviewCard";
-import {getCurrentUser} from "@/lib/actions/auth.action";
+import {getCurrentUser, getInterviewByUserId} from "@/lib/actions/auth.action";
 
-const Page = () => {
+const Page = async () => {
 
     const user = await getCurrentUser();
+    const userInterviews = await getInterviewByUserId(user?.id!);
+
+    const hasPastInterviews = userInterviews?.length > 0;
 
     return (
         <>
