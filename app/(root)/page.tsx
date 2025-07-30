@@ -4,8 +4,12 @@ import Link from "next/link"
 import Image from "next/image"
 import {dummyInterviews} from "@/constants";
 import InterviewCard from "@/constants/InterviewCard";
+import {getCurrentUser} from "@/lib/actions/auth.action";
 
 const Page = () => {
+
+    const user = await getCurrentUser();
+
     return (
         <>
 
