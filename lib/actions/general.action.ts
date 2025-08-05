@@ -95,5 +95,30 @@ export async function createFeedback(params: CreateFeedbackParams) {
 
     } catch (e) {
         console.log('Error saving feedback', e);
+
+        return { success: false}
     }
+}
+
+
+export async function getFeedbackByInterviewId(params: GetFeedbackByInterviewIdParams) : Promise<null>{
+
+    const {interviewId, userId} = params;
+
+    const feedback = await db
+        .collection('feedback')
+        .where('interviewId', '==', interviewId)
+        .where('userId', '==', userId)
+        .limit(1)
+        .get();
+
+    if(feedback.empty) return null;
+
+    const feedbackDoc = feedback.docs[0];
+
+    return {
+        id: feedbackDoc.id, ...feedback.data()
+    } as Feedback;
+
+
 }
