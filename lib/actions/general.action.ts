@@ -101,7 +101,7 @@ export async function createFeedback(params: CreateFeedbackParams) {
 }
 
 
-export async function getFeedbackByInterviewId(params: GetFeedbackByInterviewIdParams) : Promise<null>{
+export async function getFeedbackByInterviewId(params: GetFeedbackByInterviewIdParams) : Promise<Feedback | null>{
 
     const {interviewId, userId} = params;
 
@@ -117,8 +117,6 @@ export async function getFeedbackByInterviewId(params: GetFeedbackByInterviewIdP
     const feedbackDoc = feedback.docs[0];
 
     return {
-        id: feedbackDoc.id, ...feedback.data()
+        id: feedbackDoc.id, ...feedbackDoc.data()
     } as Feedback;
-
-
 }
