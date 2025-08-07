@@ -25,7 +25,7 @@ const Page = async () => {
             <section className="card-cta flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-7xl mx-auto px-4">
                 <div className="flex flex-col gap-6 w-full lg:w-1/2">
                     <div className="flex flex-col gap-4 w-full">
-                        <h2 className="text-3xl font-bold text-foreground">
+                        <h2 className="text-4xl font-bold text-foreground">
                             Get Interview-Ready with AI-Powered Practice & Feedback
                         </h2>
                         <p className="text-lg text-muted-foreground">

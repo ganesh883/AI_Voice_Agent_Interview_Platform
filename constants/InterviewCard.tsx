@@ -26,7 +26,7 @@ const InterviewCard = async ({
         <div className="card-border w-full max-w-md min-h-96">
             <div className="card-interview w-full h-full flex flex-col justify-between">
 
-                <div className="w-full bg-dark-300 px-6 py-4  rounded-3xl rounded-b-2xl relative">
+                <div className="w-full bg-dark-350 px-6 py-4  rounded-4xl rounded-b-2xl relative">
                     <div className="absolute top-0 right-0 px-4 py-2 rounded-bl-lg bg-light-600">
                         <p className="badge-text">{normalizedType}</p>
                     </div>
