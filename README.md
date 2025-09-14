@@ -1,6 +1,6 @@
 # Prepwise - AI-Powered Interview Preparation Platform
 
-![Project Banner](./public/banner.png)  
+![Project Banner](./public/logo.png)  
 
 **Prepwise** is a job interview preparation platform powered by **Vapi AI** voice agents, built to help users practice interviews, receive instant AI feedback, and track their progress. This project combines **Next.js**, **Tailwind CSS**, **Firebase**, and AI integrations for a modern and interactive experience.
 
