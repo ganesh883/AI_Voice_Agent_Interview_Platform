@@ -7,7 +7,7 @@
 ---
 
 ## 🤖 Introduction
-Mockly allows users to simulate job interviews with AI-driven voice agents. Using Next.js for frontend and backend logic, Firebase for authentication and storage, Tailwind CSS for styling, and Vapi AI for conversation simulation, Prepwise provides:
+Mockly allows users to simulate job interviews with AI-driven voice agents. Using Next.js for frontend and backend logic, Firebase for authentication and storage, Tailwind CSS for styling, and Vapi AI for conversation simulation, Mockly provides:
 
 - Real-time AI interview simulations  
 - Instant feedback and transcript analysis  
