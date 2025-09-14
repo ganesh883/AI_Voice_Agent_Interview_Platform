@@ -1,19 +1,17 @@
-# Prepwise - AI-Powered Interview Preparation Platform
+# Mockly - AI-Powered Interview Preparation Platform
 
 ![AI Interview Logo](https://img.icons8.com/fluency/96/000000/artificial-intelligence.png) 
 
-**Prepwise** is a job interview preparation platform powered by **Vapi AI** voice agents, built to help users practice interviews, receive instant AI feedback, and track their progress. This project combines **Next.js**, **Tailwind CSS**, **Firebase**, and AI integrations for a modern and interactive experience.
+**Mockly** is a job interview preparation platform powered by **Vapi AI** voice agents, built to help users practice interviews, receive instant AI feedback, and track their progress. This project combines **Next.js**, **Tailwind CSS**, **Firebase**, and AI integrations for a modern and interactive experience.
 
 ---
 
 ## 🤖 Introduction
-Prepwise allows users to simulate job interviews with AI-driven voice agents. Using Next.js for frontend and backend logic, Firebase for authentication and storage, Tailwind CSS for styling, and Vapi AI for conversation simulation, Prepwise provides:
+Mockly allows users to simulate job interviews with AI-driven voice agents. Using Next.js for frontend and backend logic, Firebase for authentication and storage, Tailwind CSS for styling, and Vapi AI for conversation simulation, Prepwise provides:
 
 - Real-time AI interview simulations  
 - Instant feedback and transcript analysis  
 - Modern, responsive UI/UX  
-
-Join our **Discord community** for support, feedback, and discussions on project bugs or improvements.
 
 ---
 
